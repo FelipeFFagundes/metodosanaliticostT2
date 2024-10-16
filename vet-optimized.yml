@@ -1,0 +1,43 @@
+!PARAMETERS
+rndnumbersPerSeed: 100000
+seeds: 
+- 1
+
+arrivals: 
+   RECEPCAO: 5.0
+
+queues: 
+    RECEPCAO:
+      servers: 4
+      capacity: 10
+      minArrival: 10.0
+      maxArrival: 15.0
+      minService: 10.0
+      maxService: 20.0
+    CONSULTAS: 
+      servers: 4
+      capacity: 10
+      minService: 10.0
+      maxService: 30.0
+    CIRURGIA: 
+      servers: 1
+      capacity: 3
+      minService: 3.0
+      maxService: 4.0
+
+network: 
+-  source: RECEPCAO
+   target: CONSULTAS
+   probability: 0.7
+-  source: RECEPCAO
+   target: CIRURGIA
+   probability: 0.1
+-  source: CONSULTAS
+   target: RECEPCAO
+   probability: 0.7
+-  source: CONSULTAS
+   target: CIRURGIA
+   probability: 0.2
+-  source: CIRURGIA
+   target: RECEPCAO
+   probability: 0.2
