@@ -22,8 +22,8 @@ queues:
     CIRURGIA: 
       servers: 2
       capacity: 3
-      minService: 3.0
-      maxService: 4.0
+      minService: 20.0
+      maxService: 40.0
 
 network: 
 -  source: RECEPCAO
