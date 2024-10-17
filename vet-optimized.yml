@@ -16,14 +16,14 @@ queues:
       maxService: 20.0
     CONSULTAS: 
       servers: 4
-      capacity: 10
+      capacity: 14
       minService: 10.0
       maxService: 30.0
     CIRURGIA: 
-      servers: 1
-      capacity: 3
-      minService: 3.0
-      maxService: 4.0
+      servers: 6
+      capacity: 6
+      minService: 20.0
+      maxService: 40.0
 
 network: 
 -  source: RECEPCAO
